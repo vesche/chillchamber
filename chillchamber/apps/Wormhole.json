@@ -1,0 +1,16 @@
+{
+    "libraries": {
+        "movies": {
+            "image": "/opt/chillchamber/luggage/wormhole_movies.png",
+            "paths": []
+        },
+        "tv_shows": {
+            "image": "/opt/chillchamber/luggage/womrhole_tv_shows.png",
+            "paths": []
+        },
+        "music": {
+            "image": "",
+            "paths": []
+        }
+    }
+}

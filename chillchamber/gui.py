@@ -1,14 +1,16 @@
 """
-chillchamber.main
+chillchamber.gui
 """
 
 import PySimpleGUI as sg
 
 from chillchamber.apps import app_list
-from chillchamber.common import get_image
+from chillchamber.common import get_image, shift_workspace
 
 
-def main():
+def run_gui():
+    shift_workspace(1)
+
     layout = [
         [
             sg.Image(filename=get_image('logo_smoke')),
@@ -24,7 +26,7 @@ def main():
         layout[-1].append(sg.Button(app.name, image_filename=app.icon_path()))
 
     window = sg.Window(
-        "chillchamber",
+        'chillchamber',
         layout,
     ).Finalize()
     window.Maximize()
@@ -39,7 +41,3 @@ def main():
             app_tiles[event].run()
 
     window.close()
-
-
-if __name__ == '__main__':
-    main()

@@ -21,7 +21,7 @@ setup(
     author_email='vesche@protonmail.com',
     entry_points={
         'console_scripts': [
-            'chillchamber = chillchamber.main:main',
+            'chillchamber = chillchamber.cli:run_cli',
         ]
     },
     install_requires=[
