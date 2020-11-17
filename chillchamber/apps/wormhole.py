@@ -10,5 +10,4 @@ class Wormhole(App):
         App.__init__(self, 'Wormhole')
 
     def run(self):
-        # run_command("/usr/bin/urxvt")
         pass

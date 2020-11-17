@@ -10,4 +10,4 @@ class Terminal(App):
         App.__init__(self, 'Terminal')
 
     def run(self):
-        run_command("/usr/bin/urxvt")
+        run_command('/usr/bin/urxvt')
