@@ -11,4 +11,3 @@ class Twitch(App):
 
     def run(self):
         run_command('/usr/bin/streamlink-twitch-gui')
-

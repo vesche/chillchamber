@@ -10,6 +10,4 @@ class Spotify(App):
         super().__init__('Spotify')
 
     def run(self):
-        print(self.config['username'])
-        print(self.config['password'])
         run_command('/usr/bin/spotify')
