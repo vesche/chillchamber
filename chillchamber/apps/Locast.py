@@ -45,7 +45,7 @@ class Locast(App):
         self.session = requests.Session()
         self._randomize_user_agent()
 
-    def _request(self, endpoint, payload=None, method='GET', ):
+    def _request(self, endpoint, payload=None, method='GET'):
         r = self.session.request(
             method,
             self.base_url + endpoint,
@@ -82,13 +82,7 @@ class Locast(App):
         resp = self._request(f'/watch/station/{station_id}/{latitude}/{longitude}')
         return resp['streamUrl']
 
-    def run(self):
-        if not (self.config['username'] or self.config['password']):
-            print('Error: No user/pass for Locast')
-            return
-
-        self.get_token()
-
+    def select_location(self):
         layout = list()
         for i in range(0, 24, 4):
             layout.append(
@@ -103,19 +97,16 @@ class Locast(App):
 
         while True:
             event, values = window.read()
-
             if event == sg.WIN_CLOSED:
                 break
-
             elif event in LOCATIONS.keys():
                 latitude, longitude = LOCATIONS[event]
                 break
 
         window.close()
+        return latitude, longitude
 
-        dma = self.get_dma(latitude, longitude)
-        stations = self.get_station_list(dma)
-
+    def select_channel(self, stations):
         channels = list()
         current_epoch = int(time.time())
         for station in stations:
@@ -150,15 +141,24 @@ class Locast(App):
 
         while True:
             event, values = window.read()
-
             if event == sg.WIN_CLOSED:
                 break
-
             elif event in [c['channel'] for c in channels]:
                 station_id = c['station_id']
                 break
 
         window.close()
+        return station_id
 
+    def run(self):
+        if not (self.config['username'] or self.config['password']):
+            print('Error: No user/pass for Locast')
+            return
+
+        self.get_token()
+        latitude, longitude = self.select_location()
+        dma = self.get_dma(latitude, longitude)
+        stations = self.get_station_list(dma)
+        station_id = self.select_channel(stations)
         stream_link = self.get_stream(latitude, longitude, station_id)
         run_command(f'/usr/bin/vlc -f {stream_link}')
