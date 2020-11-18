@@ -2,7 +2,7 @@
 chillchamber.apps.Twitch
 """
 
-from chillchamber.common import App, run_command
+from chillchamber.common import App, run_command, fullscreen
 
 
 class Twitch(App):
@@ -11,3 +11,4 @@ class Twitch(App):
 
     def run(self):
         run_command('/usr/bin/streamlink-twitch-gui')
+        fullscreen()

@@ -7,7 +7,6 @@ import PySimpleGUI as sg
 from chillchamber.apps import app_list
 from chillchamber.common import get_image, shift_workspace
 
-
 sg.LOOK_AND_FEEL_TABLE['ChillChamber'] = {
     'BACKGROUND': '#000000',
     'TEXT': '#faebd7',
@@ -35,9 +34,12 @@ def run_gui():
         ],
     ]
 
+    workspace = 2
     app_tiles = dict()
     for App in app_list:
         app = App()
+        app.workspace = workspace
+        workspace += 1
         app_tiles[app.name] = app
 
     ### shitty way of doing a 4x4 grid menu
@@ -68,6 +70,7 @@ def run_gui():
             break
 
         elif event in app_tiles:
+            shift_workspace(app_tiles[event].workspace)
             app_tiles[event].run()
 
     window.close()

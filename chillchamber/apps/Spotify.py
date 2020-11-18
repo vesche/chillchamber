@@ -2,7 +2,7 @@
 chillchamber.apps.Spotify
 """
 
-from chillchamber.common import App, run_command
+from chillchamber.common import App, run_command, fullscreen
 
 
 class Spotify(App):
@@ -11,3 +11,4 @@ class Spotify(App):
 
     def run(self):
         run_command('/usr/bin/spotify')
+        fullscreen()

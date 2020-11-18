@@ -2,7 +2,7 @@
 chillchamber.apps.YouTube
 """
 
-from chillchamber.common import App, run_command
+from chillchamber.common import App, run_command, fullscreen
 
 
 class YouTube(App):
@@ -11,4 +11,4 @@ class YouTube(App):
 
     def run(self):
         run_command('/usr/bin/firefox -new-window https://www.youtube.com')
-        # run_command('xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11')
+        fullscreen()
