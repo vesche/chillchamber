@@ -1,5 +1,5 @@
 """
-chillchamber.apps.Locast
+chillchamber.apps.Spotify
 """
 
 from chillchamber.common import App, run_command
