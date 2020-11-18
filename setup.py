@@ -8,10 +8,12 @@ setup(
     packages=[
         'chillchamber',
         'chillchamber.apps',
-        'chillchamber.images'
+        'chillchamber.extras',
+        'chillchamber.images',
     ],
     package_data = {
-        'chillchamber.images': ['*.png']
+        'chillchamber.extras': ['*.txt'],
+        'chillchamber.images': ['*.png'],
     },
     version=VERSION,
     description='chillchamber wip',
@@ -25,7 +27,8 @@ setup(
         ]
     },
     install_requires=[
-        'PySimpleGUI'
+        'PySimpleGUI',
+        'requests'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
