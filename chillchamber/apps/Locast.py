@@ -6,8 +6,8 @@ import os
 import time
 import random
 import requests
-import PySimpleGUI as sg
 
+from chillchamber.gui import sg
 from chillchamber.common import App, run_command, get_root_pwd
 
 LOCATIONS = {

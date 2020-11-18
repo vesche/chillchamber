@@ -23,8 +23,8 @@ setup(
     author_email='vesche@protonmail.com',
     entry_points={
         'console_scripts': [
-            'chillchamber = chillchamber.cli:run_cli',
-        ]
+            'chillchamber = chillchamber.cli:run_menu',
+        ],
     },
     install_requires=[
         'PySimpleGUI',
@@ -33,5 +33,5 @@ setup(
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8'
-    ]
+    ],
 )

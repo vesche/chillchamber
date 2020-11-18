@@ -4,9 +4,8 @@ chillchamber.cli
 
 import argparse
 
-from chillchamber.gui import run_gui
+from chillchamber.menu import run_menu
 from chillchamber.meta import VERSION
-from chillchamber.install import run_install
 
 
 def get_parser():

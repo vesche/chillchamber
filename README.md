@@ -1,7 +1,12 @@
 # chillchamber
 
-WIP
+HTPC launcher.
 
-## Notes
+## TODO
 
-- Desktop matches theme with loading gif
+* Wormhole
+    * sg 1: pick library
+    * sg 2: file selector, image loader, search
+    * metadata grabber
+    * subtitle downloader
+* ROMs
