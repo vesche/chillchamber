@@ -155,10 +155,23 @@ class Locast(App):
             print('Error: No user/pass for Locast')
             return
 
+        # get Locast bearer token
         self.get_token()
+
+        # select location, get latitude & longitude
         latitude, longitude = self.select_location()
+
+        # get DMA using latitude & longitude
         dma = self.get_dma(latitude, longitude)
+
+        # get list of stations using DMA
         stations = self.get_station_list(dma)
+
+        # select station, get station ID
         station_id = self.select_channel(stations)
+
+        # get stream link using latitude, longitude, and station ID
         stream_link = self.get_stream(latitude, longitude, station_id)
+
+        # start stream via VLC
         run_command(f'/usr/bin/vlc -f {stream_link}')
