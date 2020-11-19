@@ -29,7 +29,7 @@ def run_menu():
     i = 0
     row = list()
     for app_name, app in app_tiles.items():
-        row.append(sg.Button(app_name, image_filename=app.icon_path()))
+        row.append(sg.Button(key=app_name, image_filename=app.icon_path()))
         i += 1
         if i == 4:
             i = 0
