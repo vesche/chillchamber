@@ -23,7 +23,7 @@ setup(
     author_email='vesche@protonmail.com',
     entry_points={
         'console_scripts': [
-            'chillchamber = chillchamber.cli:run_menu',
+            'chillchamber = chillchamber.cli:run_cli',
         ],
     },
     install_requires=[
