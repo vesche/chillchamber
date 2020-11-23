@@ -1,5 +1,5 @@
 """
-chillchamber.apps.YouTube
+chillchamber.apps.youtube
 """
 
 from chillchamber.common import App, run_command, fullscreen

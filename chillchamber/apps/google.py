@@ -1,5 +1,5 @@
 """
-chillchamber.apps.Google
+chillchamber.apps.google
 """
 
 from chillchamber.common import App, run_command, fullscreen

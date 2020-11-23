@@ -1,14 +1,14 @@
 """
-chillchamber.apps.Spotify
+chillchamber.apps.twitch
 """
 
 from chillchamber.common import App, run_command, fullscreen
 
 
-class Spotify(App):
+class Twitch(App):
     def __init__(self):
-        super().__init__('Spotify')
+        super().__init__('Twitch')
 
     def run(self):
-        run_command('/usr/bin/spotify')
+        run_command('/usr/bin/streamlink-twitch-gui')
         fullscreen()

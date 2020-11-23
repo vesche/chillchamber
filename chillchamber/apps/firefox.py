@@ -1,14 +1,14 @@
 """
-chillchamber.apps.Gameboy
+chillchamber.apps.firefox
 """
 
 from chillchamber.common import App, run_command, fullscreen
 
 
-class Gameboy(App):
+class Firefox(App):
     def __init__(self):
-        super().__init__('Gameboy')
+        super().__init__('Firefox')
 
     def run(self):
-        run_command('/usr/bin/visualboyadvance-m')
+        run_command(f'/usr/bin/firefox -new-window')
         fullscreen()

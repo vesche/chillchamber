@@ -1,5 +1,5 @@
 """
-chillchamber.apps.Emby
+chillchamber.apps.emby
 """
 
 from chillchamber.common import App, run_command, fullscreen

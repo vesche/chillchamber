@@ -2,26 +2,28 @@
 chillchamber.apps
 """
 
-from chillchamber.apps.Emby         import Emby
-from chillchamber.apps.Firefox      import Firefox
-from chillchamber.apps.Gameboy      import Gameboy
-from chillchamber.apps.Google       import Google
-from chillchamber.apps.Locast       import Locast
-from chillchamber.apps.PrimeVideo   import PrimeVideo
-from chillchamber.apps.Snes         import Snes
-from chillchamber.apps.Spotify      import Spotify
-from chillchamber.apps.Terminal     import Terminal
-from chillchamber.apps.Twitch       import Twitch
-from chillchamber.apps.Wormhole     import Wormhole
-from chillchamber.apps.YouTube      import YouTube
+from chillchamber.apps.emby       import Emby
+from chillchamber.apps.firefox    import Firefox
+from chillchamber.apps.gameboy    import GameBoy
+from chillchamber.apps.google     import Google
+from chillchamber.apps.locast     import Locast
+from chillchamber.apps.plunder    import Plunder
+from chillchamber.apps.primevideo import PrimeVideo
+from chillchamber.apps.snes       import Snes
+from chillchamber.apps.spotify    import Spotify
+from chillchamber.apps.terminal   import Terminal
+from chillchamber.apps.twitch     import Twitch
+from chillchamber.apps.wormhole   import Wormhole
+from chillchamber.apps.youtube    import YouTube
 
 
 app_list = [
     Emby,
     Firefox,
-    Gameboy,
+    GameBoy,
     Google,
     Locast,
+    Plunder,
     PrimeVideo,
     Snes,
     Spotify,

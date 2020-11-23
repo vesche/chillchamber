@@ -9,7 +9,7 @@ mkdir -p /opt/chillchamber/apps
 mkdir /opt/chillchamber/luggage
 mkdir /opt/chillchamber/wormhole
 
-for app_config in $(ls chillchamber/apps/*.json); do
+for app_config in $(ls chillchamber/configs/*.json); do
     cp "$app_config" /opt/chillchamber/apps/
 done
 

@@ -1,14 +1,14 @@
 """
-chillchamber.apps.Snes
+chillchamber.apps.terminal
 """
 
 from chillchamber.common import App, run_command, fullscreen
 
 
-class Snes(App):
+class Terminal(App):
     def __init__(self):
-        super().__init__('Snes')
+        super().__init__('Terminal')
 
     def run(self):
-        run_command('/usr/bin/snes9x-gtk')
+        run_command('/usr/bin/urxvt')
         fullscreen()

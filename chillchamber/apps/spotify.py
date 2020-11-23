@@ -1,14 +1,14 @@
 """
-chillchamber.apps.Firefox
+chillchamber.apps.spotify
 """
 
 from chillchamber.common import App, run_command, fullscreen
 
 
-class Firefox(App):
+class Spotify(App):
     def __init__(self):
-        super().__init__('Firefox')
+        super().__init__('Spotify')
 
     def run(self):
-        run_command(f'/usr/bin/firefox -new-window')
+        run_command('/usr/bin/spotify')
         fullscreen()

@@ -1,5 +1,5 @@
 """
-chillchamber.apps.PrimeVideo
+chillchamber.apps.primevideo
 """
 
 from chillchamber.common import App, run_command, fullscreen

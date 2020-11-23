@@ -1,5 +1,5 @@
 """
-chillchamber.apps.Locast
+chillchamber.apps.locast
 """
 
 import os

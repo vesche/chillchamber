@@ -1,8 +1,8 @@
 """
-chillchamber.apps.Wormhole
+chillchamber.apps.wormhole
 """
 
-from chillchamber.common import App, run_command
+from chillchamber.common import App
 
 
 class Wormhole(App):
