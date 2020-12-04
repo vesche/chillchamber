@@ -2,7 +2,7 @@
 chillchamber.apps.terminal
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class Terminal(App):
@@ -11,4 +11,3 @@ class Terminal(App):
 
     def run(self):
         run_command('/usr/bin/urxvt')
-        fullscreen()

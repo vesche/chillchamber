@@ -2,7 +2,7 @@
 chillchamber.apps.gameboy
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class GameBoy(App):
@@ -11,4 +11,3 @@ class GameBoy(App):
 
     def run(self):
         run_command('/usr/bin/visualboyadvance-m')
-        fullscreen()

@@ -2,7 +2,7 @@
 chillchamber.apps.firefox
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class Firefox(App):
@@ -11,4 +11,3 @@ class Firefox(App):
 
     def run(self):
         run_command(f'/usr/bin/firefox -new-window')
-        fullscreen()

@@ -2,7 +2,7 @@
 chillchamber.apps.snes
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class Snes(App):
@@ -11,4 +11,3 @@ class Snes(App):
 
     def run(self):
         run_command('/usr/bin/snes9x-gtk')
-        fullscreen()

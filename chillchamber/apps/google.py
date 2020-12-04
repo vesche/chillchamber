@@ -2,7 +2,7 @@
 chillchamber.apps.google
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class Google(App):
@@ -11,4 +11,3 @@ class Google(App):
 
     def run(self):
         run_command('/usr/bin/firefox -new-window https://www.google.com/')
-        fullscreen()

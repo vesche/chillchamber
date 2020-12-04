@@ -23,10 +23,6 @@ def shift_workspace(n):
     run_command(f"/usr/bin/bspc desktop -f ^{n}")
 
 
-def fullscreen():
-    os.system('sleep 1 && bspc node -t fullscreen')
-
-
 class App():
     def __init__(self, name):
         self.name = name

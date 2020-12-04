@@ -2,7 +2,7 @@
 chillchamber.apps.emby
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class Emby(App):
@@ -12,4 +12,3 @@ class Emby(App):
     def run(self):
         url = self.config['url']
         run_command(f'/usr/bin/firefox -new-window {url}')
-        fullscreen()

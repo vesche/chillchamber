@@ -2,7 +2,7 @@
 chillchamber.apps.youtube
 """
 
-from chillchamber.common import App, run_command, fullscreen
+from chillchamber.common import App, run_command
 
 
 class YouTube(App):
@@ -11,4 +11,3 @@ class YouTube(App):
 
     def run(self):
         run_command('/usr/bin/firefox -new-window https://www.youtube.com')
-        fullscreen()
