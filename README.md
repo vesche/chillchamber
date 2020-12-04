@@ -1,6 +1,6 @@
 # chillchamber
 
-This is an HTPC launcher, it's still a work in-progress.
+This is an HTPC launcher, it's still a work-in-progress.
 
 ![scrot](scrot.png)
 
